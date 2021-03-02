@@ -1,7 +1,7 @@
 {
 	"inbounds": [
 		{
-			"port": 443,
+			"listen": "/etc/caddy/xray",
 			"protocol": "vless",
 			"settings": {
 				"clients": [

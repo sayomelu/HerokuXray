@@ -4,7 +4,9 @@ RUN apk add --no-cache ca-certificates &&\
     chmod +x /xray
 
 ADD ./etc/xray.json /xray.json
-ADD ./etc/start.sh /start.sh
-RUN chmod +x /start.sh
+ADD ./etc/caddyfile /etc/caddy/caddyfile
 
-CMD /start.sh
+CMD sed -i "s/\$UUID/$UUID/g" xray.json &&\
+    sed -i "s/\$UUID/$UUID/g" /etc/caddy/caddyfile &&\
+    /xray -c /xray.json &&\
+    caddy run --config /etc/caddy/Caddyfile
