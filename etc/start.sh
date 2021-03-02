@@ -1,5 +1,5 @@
 #!/bin/sh
 
-sed -e "s/\$UUID/$UUID/g" /xray.json
+sed "s/\$UUID/$UUID/g" xray.json > config.json
 
-/xray -config /xray.json
+./xray
