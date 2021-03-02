@@ -1,5 +1,5 @@
 FROM alpine
-RUN apk add --no-cache ca-certificates &&\
+RUN apk add --no-cache caddy ca-certificates &&\
     wget -O - https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip | unzip - &&\
     chmod +x /xray
 
