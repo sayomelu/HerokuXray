@@ -1,10 +1,3 @@
-:443
-root * /usr/share/caddy
-file_server
-
-@xray {
-	header Connection *Upgrade*
-	header Upgrade websocket
-	path /
+:$PORT {
+	reverse_proxy / unix//etc/caddy/xray
 }
-reverse_proxy @xray unix//etc/caddy/xray

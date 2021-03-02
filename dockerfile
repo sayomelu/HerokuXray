@@ -8,5 +8,6 @@ ADD ./etc/caddyfile /etc/caddy/caddyfile
 
 CMD sed -i "s/\$UUID/$UUID/g" xray.json &&\
     sed -i "s/\$UUID/$UUID/g" /etc/caddy/caddyfile &&\
+    sed -i "s/\$PORT/$PORT/g" /etc/caddy/caddyfile &&\
     /xray -c /xray.json &&\
-    caddy run --config /etc/caddy/Caddyfile
+    caddy run --config /etc/caddy/caddyfile
