@@ -4,9 +4,6 @@
     "env": {
         "UUID": {
             "value": ""
-        },
-        "CONFIGXRAY": {
-            "value": "https://raw.githubusercontent.com/leyounet/XrayHeroku/master/etc/xray.json"
         }
     }
 }
