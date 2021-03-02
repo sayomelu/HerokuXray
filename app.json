@@ -5,9 +5,6 @@
         "UUID": {
             "value": ""
         },
-        "CONFIGCADDY": {
-            "value": "https://raw.githubusercontent.com/leyounet/XrayHeroku/master/etc/Caddyfile"
-        },
         "CONFIGXRAY": {
             "value": "https://raw.githubusercontent.com/leyounet/XrayHeroku/master/etc/xray.json"
         }

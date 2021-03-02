@@ -1,7 +1,7 @@
 {
 	"inbounds": [
 		{
-			"listen": "/etc/caddy/vless",
+			"port": 443,
 			"protocol": "vless",
 			"settings": {
 				"clients": [
